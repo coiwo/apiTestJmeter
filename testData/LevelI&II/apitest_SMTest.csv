@@ -1,0 +1,3 @@
+STR_TestCase_SmokeTest;STR_ID;STR_METHOD;STR_PARAMS;STR_PARAMS_AUTH;STR_JSONRPC;
+SM_Test_example-status;SM_Test_example-status;example-status;${example_id}:"${example_id_1}",;${auth_token}:"${auth_key}";2.0;
+SM_Test_example-list;SM_Test_example-list;example-list;${exampleListV1}:${default_exampleListV1_Value},${exampleListV2}:${default_exampleListV2_Value},${exampleListV3}:${default_exampleListV3_Value},;${auth_token}:"${auth_key}";2.0;

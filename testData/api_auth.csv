@@ -1,0 +1,2 @@
+STR_Demo_api_auth;STR_ID;STR_METHOD;STR_PARAMS;STR_PARAMS_AUTH;STR_JSONRPC;
+Demo_api_auth;Demo_api_auth;api-auth;${username}:${username_Value},${password}:${password_Value};;${jsonrpc_Value};

@@ -1,0 +1,24 @@
+HOST$
+PORT$1234
+PATH$/yourProject/json-rpc-api-call
+Project_ROOT$C:/yourProjectRootDir
+#<-----------General Variables-------------------->#
+jsonrpc_Value$2.0
+username$"username"
+username_Value$"yourUserNameValue"
+password$"password"
+password_Value$"yourPasswordValue"
+auth_token$"AuthToken"
+
+#<--------Database------>#
+DB_Name$database1
+DB_URL$jdbc:sqlserver://10.7.208.120:1433;DatabaseName=yourdbName;
+JDBC_Driver_Class$com.microsoft.sqlserver.jdbc.SQLServerDriver
+DB_username$yourUserName
+
+#<--------Variables------>#
+example_id$"example_id"
+exampleListV1$"exampleListV1"
+default_exampleListV1_Value$"testtest1"
+default_exampleListV2_Value$"testtest2"
+default_exampleListV3_Value$"testtest3"

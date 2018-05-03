@@ -1,0 +1,9 @@
+id	name	description	address_one	address_two	city	state	zip	country	contact_info_name	contact_info_remarks	email	phone	cru_mode	cru_serial_number	status
+777202	RS777202												MANUAL	9WK1KYNF	ENABLED
+777997	QAThree												AUTOMATIC	null	ENABLED
+777398	TwoRU												OFF	null	ENABLED
+777397	CPYICHI												OFF	null	ENABLED
+777433	ElenaMachine												OFF	null	ENABLED
+777204	FreeBSDClient												OFF	null	ENABLED
+777383	RS777383												OFF	null	ENABLED
+777382	RS777382												OFF	null	ENABLED

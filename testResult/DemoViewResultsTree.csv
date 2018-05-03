@@ -1,0 +1,16 @@
+1412274735358,8,JDBC Request_Ingest,200,OK,CinemaCMSAPITest 1-1,text,true,558,0
+1412274735396,153,ingest-list,200,OK,CinemaCMSAPITest 1-1,text,true,23618,152
+1412274735556,594,transmission-list,200,OK,CinemaCMSAPITest 1-1,text,true,24270,594
+1412274736156,454,command-list,200,OK,CinemaCMSAPITest 1-1,text,true,13498,454
+1412274736614,33,ingest-status,200,OK,CinemaCMSAPITest 1-1,text,true,1280,33
+
+1412274757261,11,JDBC Request_Ingest,200,OK,CinemaCMSAPITest 1-1,text,true,558,0
+1412274757280,19,ingest-list,200,OK,CinemaCMSAPITest 1-1,text,false,438,19
+1412274757302,62,transmission-list,200,OK,CinemaCMSAPITest 1-1,text,false,356,62
+1412274757367,17,command-list,200,OK,CinemaCMSAPITest 1-1,text,false,356,17
+1412274757388,28,ingest-status,200,OK,CinemaCMSAPITest 1-1,text,true,1280,28
+1412277579862,4,JDBC Request_Ingest,200,OK,Thread Group 1-1,text,true,558,0
+1412277579868,61,ingest-list,200,OK,Thread Group 1-1,text,true,23618,61
+1412277579932,263,transmission-list,200,OK,Thread Group 1-1,text,true,24270,263
+1412277580198,419,command-list,200,OK,Thread Group 1-1,text,true,13498,419
+1412277580621,39,ingest-status,200,OK,Thread Group 1-1,text,true,1280,39

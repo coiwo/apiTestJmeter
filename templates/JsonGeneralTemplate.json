@@ -1,0 +1,7 @@
+{ 	
+	"id": "${__eval(${STR_ID})}", 	
+	"method": "${__eval(${STR_METHOD})}", 	
+	"params":{ ${__eval(${STR_PARAMS})}${__eval(${STR_PARAMS_AUTH})}
+	}, 	
+	"jsonrpc":"${__eval(${STR_JSONRPC})}"
+}

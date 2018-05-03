@@ -1,0 +1,12 @@
+TxModeID	TxModeName	Remarks	FazztFEC	FazztFECVersion	PacketSize	Flags	AutoUpgrade	DemoMode	DeliveryMethod	EmailNotificationOff	ExtraProcessing	AckModeID	LastModified	UserCode	UserString	AnyParams	InPolicy	PrepQueueID	TxQueueID	ChannelID
+A5DF2B7B-0987-4D39-9658-1A3B52F50FC4	FreeBSD Test Overwrite Files		10	2	0	A         		F	B	F	null	null	2014-09-26 19:09:08.393	0	null	null	F	null	null	0
+17BF5DE7-3821-4FA2-8777-37B4B47307E8	Braided FEC with Reports	null	0	1	0	          		F	B	F	null	FB7BFBB8-68CE-4F7E-BC55-C7338446A468	2014-05-19 05:53:57.65	0	null	["FazztFECSAlgorithm"=>"BraidedFEC","FazztFECSDataWindow"=>33554432,"FazztFECS"=>2]	F	null	null	0
+45E67DDD-65B6-40ED-9901-5DD0DAC1067A	[Update Configuration]	Mode to remotely update the Receive Sites configuration.	10	2	0	PI        		F	B	F	null	null	2014-05-19 05:53:57.697	0	null	["PostProcessing"=>{["Parameter"=>0,"GUID"=>"BE756125-12FA-4E81-B0C1-65CF49F0B1D2"]}]	F	null	null	0
+8ACF367E-D19E-4C20-8EF7-8840C55FFED1	High FEC, no reports	null	10	2	0	          		F	B	F	null	null	2014-05-19 05:53:57.59	0	null	null	F	null	null	0
+2496F26C-03F0-475B-A977-AD888E2E59EE	Normal FEC, no reports	null	5	2	0	          		F	B	F	null	null	2014-05-19 05:53:57.577	0	null	null	F	null	null	0
+EF8A81E4-E8CD-49C6-9259-B07CDCBD2554	With Reports	null	8	2	0	          		F	B	F	null	FB7BFBB8-68CE-4F7E-BC55-C7338446A468	2014-05-19 05:53:57.623	0	null	null	F	null	null	0
+0044ABDC-5917-4C72-9B19-CD55172A1682	[Upgrade Add-on]	Mode to remotely install an add-on component.	10	2	0	AI        	inplace	F	B	F	null	null	2014-05-19 05:53:57.68	0	null	null	F	null	null	0
+350FF937-93CA-47B8-91B6-E42465702321	[Extended Upgrade]	Extended mode to remotely install an add-on component or upgrade Receive Sites.	10	2	0	AI        	extended	F	B	F	null	FB7BFBB8-68CE-4F7E-BC55-C7338446A468	2014-05-19 05:53:57.713	0	null	null	F	null	null	0
+B95694C5-1FEE-4622-9D80-EF2D3E8B40B8	With Reports Command	null	10	2	0	          		F	B	F	null	FB7BFBB8-68CE-4F7E-BC55-C7338446A468	2014-05-19 07:43:46.42	0	null	null	F	null	null	0
+27D83B8E-99CD-4516-AC66-F9FB32C17324	Compound FEC with Reports	null	0	1	0	          		F	B	F	null	FB7BFBB8-68CE-4F7E-BC55-C7338446A468	2014-05-19 05:53:57.637	0	null	["FazztFECSAlgorithm"=>"CompoundFEC","FazztFECSDataWindow"=>67108864,"FazztFECS"=>3]	F	null	null	0
+0BB160D2-8736-4A63-BD7E-FE06CD9CF8FA	[Upgrade System]	Mode to remotely upgrade Receive Sites.	10	2	0	AI        	system	F	B	F	null	null	2014-05-19 05:53:57.66	0	null	null	F	null	null	0

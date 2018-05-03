@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.6" jmeter="2.11 r1554548">
+  <hashTree>
+    <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="true"/>
+    
+	 <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="RequestFromDB_BeforeRequest" enabled="true"/>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request_Ingest" enabled="true">
+                <stringProp name="dataSource">${DCPCMSDB_Name}</stringProp>
+                <stringProp name="query">SELECT TOP 1 [id]
+      ,[path]
+      ,[package_id]
+      ,[package_uuid]
+      ,[package_name]
+      ,[ingest_job_type]
+      ,[status]
+      ,[created]
+      ,[submitted]
+      ,[initiated]
+      ,[finished]
+      ,[completed]
+      ,[last_status_change]
+      ,[state]
+      ,[submitted_by]
+  FROM [dcp].[dbo].[INGEST_JOB]</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">ingestId</stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="JDBCRequest" enabled="true">
+                  <stringProp name="FileSaver.filename">~/testResult/JDBCRequest/Ingest</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request_Packages" enabled="true">
+                <stringProp name="dataSource">${DCPCMSDB_Name}</stringProp>
+                <stringProp name="query">SELECT TOP 1000 [id]
+      ,[package_uuid]
+      ,[name]
+      ,[path]
+      ,[package_size]
+      ,[package_type]
+      ,[status]
+      ,[created]
+      ,[deleted]
+      ,[last_status_change]
+  FROM [dcp].[dbo].[PACKAGE]</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">packageId</stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="JDBCRequest" enabled="true">
+                  <stringProp name="FileSaver.filename">~/testResult/JDBCRequest/Packages</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request_Packages_UUID_Extract" enabled="true">
+                <stringProp name="dataSource">${DCPCMSDB_Name}</stringProp>
+                <stringProp name="query">SELECT TOP 10 
+      [package_uuid]
+  FROM [dcp].[dbo].[PACKAGE] where status = &apos;active&apos;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">packageId</stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="JDBCRequest" enabled="true">
+                  <stringProp name="FileSaver.filename">~/testResult/JDBCRequest/Packages</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request_Transmissions" enabled="true">
+                <stringProp name="dataSource">${DCPCMSDB_Name}</stringProp>
+                <stringProp name="query">SELECT TOP 1000 [id]
+      ,[package_uuid]
+      ,[name]
+      ,[path]
+      ,[package_size]
+      ,[package_type]
+      ,[status]
+      ,[created]
+      ,[deleted]
+      ,[last_status_change]
+  FROM [dcp].[dbo].[PACKAGE]</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">transmissionId</stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="JDBCRequest" enabled="true">
+                  <stringProp name="FileSaver.filename">~/testResult/JDBCRequest/Transmissions</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request_Sites" enabled="true">
+                <stringProp name="dataSource">${DCPCMSDB_Name}</stringProp>
+                <stringProp name="query">SELECT TOP 1000 [id]
+      ,[name]
+      ,[description]
+      ,[address_one]
+      ,[address_two]
+      ,[city]
+      ,[state]
+      ,[zip]
+      ,[country]
+      ,[contact_info_name]
+      ,[contact_info_remarks]
+      ,[email]
+      ,[phone]
+      ,[cru_mode]
+      ,[cru_serial_number]
+      ,[status]
+  FROM [dcp].[dbo].[SITE]</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">siteId</stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="JDBCRequest" enabled="true">
+                  <stringProp name="FileSaver.filename">~/testResult/JDBCRequest/Transmissions</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request_fazzt_txMode" enabled="true">
+                <stringProp name="dataSource">${DCPCMSDB_Name}</stringProp>
+                <stringProp name="query">SELECT TOP 1000 [TxModeID]
+      ,[TxModeName]
+      ,[Remarks]
+      ,[FazztFEC]
+      ,[FazztFECVersion]
+      ,[PacketSize]
+      ,[Flags]
+      ,[AutoUpgrade]
+      ,[DemoMode]
+      ,[DeliveryMethod]
+      ,[EmailNotificationOff]
+      ,[ExtraProcessing]
+      ,[AckModeID]
+      ,[LastModified]
+      ,[UserCode]
+      ,[UserString]
+      ,[AnyParams]
+      ,[InPolicy]
+      ,[PrepQueueID]
+      ,[TxQueueID]
+      ,[ChannelID]
+  FROM [Fazzt].[dbo].[TxModes]</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">fazzt_TxModeID</stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="JDBCRequest_fazzt_txMode" enabled="true">
+                  <stringProp name="FileSaver.filename">~/testResult/JDBCRequest/fazzt_txMode</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request_fazzt_queues" enabled="true">
+                <stringProp name="dataSource">${DCPCMSDB_Name}</stringProp>
+                <stringProp name="query">SELECT TOP 1000 [QueueID]
+      ,[QueueType]
+      ,[SinkType]
+      ,[SinkAttributes]
+      ,[QueueAttributes]
+      ,[Properties]
+      ,[QueueName]
+      ,[QueueCfgType]
+      ,[NextQueue]
+  FROM [Fazzt].[dbo].[Queues]where QueueCfgType = &apos;Preprocess&apos;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">fazzt_TxModeID</stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="JDBCRequest_fazzt_txMode" enabled="true">
+                  <stringProp name="FileSaver.filename">~/testResult/JDBCRequest/fazzt_txMode</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+	
+  </hashTree>
+</jmeterTestPlan>
