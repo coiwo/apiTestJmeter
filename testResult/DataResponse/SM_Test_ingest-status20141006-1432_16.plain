@@ -1,2 +1,0 @@
-id	path	package_id	package_uuid	package_name	ingest_job_type	status	created	submitted	initiated	finished	completed	last_status_change	state	submitted_by
-1ef5a75d-6021-42a1-bc5a-72cddab4176d	C:\Temp\TinyDCPTestFile\v2.0.0\v2.0.0TestDCP30\ASSETMAP.xml	null	b9c960ff-125d-4dd4-8c28-f4921ddecfdb	v2.0.0TestDCP30	INGESTJOB	UNSUBMITTED	2014-10-03 21:15:50.417	null	null	null	null	2014-10-03 21:15:50.417	null	null

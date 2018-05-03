@@ -1,2 +1,0 @@
-id	path	package_id	package_uuid	package_name	ingest_job_type	status	created	submitted	initiated	finished	completed	last_status_change	state	submitted_by
-45fecfd6-db67-471d-8de2-f0ea8ab02d9e	c:\Temp\TestPlanFiles\TinyDCPTestFile\TinyDCPTestSample051620141\ASSETMAP	8711c360-edc9-4176-8b43-980c4431eae2	e8c50d8f-9f6d-4542-ad8f-b4fa4c142db5	TinyDCPTestSample051620141 1	INGESTJOB	COMPLETED	2014-05-22 04:17:39.817	2014-05-22 04:17:43.013	2014-05-22 04:17:46.053	2014-05-22 04:17:49.293	2014-05-22 04:17:49.293	2014-05-22 04:17:49.293	BUNDLE_CREATED	kencast-dcp
